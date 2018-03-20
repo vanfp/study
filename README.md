@@ -1,6 +1,8 @@
 # Study
 ## A simple project starter to aid learning
 
+![](https://www.fpcomplete.com/hubfs/haskell_logo.svg?t=1521138878665)
+
 This is a starter project set up for testing and benchmarking. Happy hacking!
 
 ## Build
