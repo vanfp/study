@@ -1,0 +1,135 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 6732d6e952743521c3390658399aa12cf2b1d1982344f1cb735a5c8b7f32d811
+
+name:           study
+version:        0.1.0
+synopsis:       A simple project starter to aid learning
+description:    Designed for the Vancouver HFFP Reading Group
+homepage:       https://github.com/expede/study#readme
+bug-reports:    https://github.com/expede/study/issues
+author:         Brooklyn Zelenka
+maintainer:     Brooklyn Zelenka
+license:        MIT
+license-file:   LICENSE.md
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    CHANGELOG.md
+    LICENSE.md
+    package.yaml
+    README.md
+    stack.yaml
+
+source-repository head
+  type: git
+  location: https://github.com/expede/study
+
+library
+  hs-source-dirs:
+      library
+  ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates
+  build-depends:
+      async
+    , base
+    , flow
+    , mtl
+    , pretty-show
+    , protolude
+    , text
+  exposed-modules:
+      Study
+  other-modules:
+      Paths_study
+  default-language: Haskell2010
+
+executable study
+  main-is: Main.hs
+  hs-source-dirs:
+      executable
+  ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      async
+    , base
+    , flow
+    , mtl
+    , pretty-show
+    , protolude
+    , study
+    , text
+  other-modules:
+      Paths_study
+  default-language: Haskell2010
+
+test-suite study-doctest
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  hs-source-dirs:
+      test/doctest
+  ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -threaded -rtsopts -with-rtsopts=-N -O2
+  build-depends:
+      Glob
+    , QuickCheck
+    , async
+    , base
+    , doctest
+    , flow
+    , mtl
+    , pretty-show
+    , protolude
+    , study
+    , text
+  other-modules:
+      Paths_study
+  default-language: Haskell2010
+
+test-suite study-test
+  type: exitcode-stdio-1.0
+  main-is: Driver.hs
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -threaded -rtsopts -with-rtsopts=-N -O2
+  build-depends:
+      async
+    , base
+    , flow
+    , hspec
+    , hspec-discover
+    , mtl
+    , pretty-show
+    , protolude
+    , study
+    , tasty
+    , tasty-discover >=4.1
+    , tasty-hspec
+    , tasty-hunit
+    , tasty-rerun
+    , tasty-smallcheck
+    , text
+  other-modules:
+      UnitTest.Study
+      Paths_study
+  default-language: Haskell2010
+
+benchmark study-benchmarks
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  hs-source-dirs:
+      benchmark
+  ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      async
+    , base
+    , criterion
+    , flow
+    , mtl
+    , pretty-show
+    , protolude
+    , study
+    , text
+  other-modules:
+      Paths_study
+  default-language: Haskell2010

@@ -1,0 +1,95 @@
+name: study
+version: '0.1.0'
+github: "expede/study"
+license: MIT
+author: "Brooklyn Zelenka"
+maintainer: "Brooklyn Zelenka"
+license-file: LICENSE.md
+synopsis: A simple project starter to aid learning
+description: Designed for the Vancouver HFFP Reading Group
+extra-source-files:
+  - CHANGELOG.md
+  - LICENSE.md
+  - package.yaml
+  - README.md
+  - stack.yaml
+
+ghc-options:
+  - -Wall
+  # as recommended in:
+  # https://functor.tokyo/blog/2017-07-28-ghc-warnings-you-should-enable
+  - -Wincomplete-uni-patterns
+  - -Wincomplete-record-updates
+
+dependencies:
+  - async
+  - base
+  - flow
+  - pretty-show
+  - protolude
+  - mtl
+  - text
+
+library:
+  source-dirs: library
+  exposed-modules:
+    - Study
+
+executables:
+  study:
+    source-dirs: executable
+    main: Main.hs
+    dependencies:
+      - study
+    ghc-options:
+      - -rtsopts
+      - -threaded
+      - -with-rtsopts=-N
+
+benchmarks:
+  study-benchmarks:
+    source-dirs: benchmark
+    main: Main.hs
+    dependencies:
+      - base
+      - study
+      - criterion
+    ghc-options:
+      - -rtsopts
+      - -threaded
+      - -with-rtsopts=-N
+
+tests:
+  study-test:
+    main: Driver.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -O2
+    dependencies:
+      - base
+      - hspec
+      - hspec-discover
+      - study
+      - tasty
+      - tasty-discover >= 4.1
+      - tasty-hunit
+      - tasty-hspec
+      - tasty-smallcheck
+      - tasty-rerun
+
+  study-doctest:
+    main: Main.hs
+    source-dirs: test/doctest
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -O2
+    dependencies:
+      - doctest
+      - Glob
+      - QuickCheck
+      - study
