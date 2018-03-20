@@ -1,7 +1,7 @@
 # Study
 ## A simple project starter to aid learning
 
-<img  width="400" src="https://www.google.ca/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj3u8vKt_rZAhVhVWMKHQNZBxoQjRx6BAgAEAU&url=http%3A%2F%2Fcomputingstories.com%2Fhaskell%2520stories%2Fhaskell-impressions.html&psig=AOvVaw16AG2ehieADotJaepqFnzT&ust=1521619248353009">
+<img src="https://www.fpcomplete.com/hubfs/haskell_logo.svg?t=1521138878665" width="400">
 
 
 This is a starter project set up for testing and benchmarking. Happy hacking!
