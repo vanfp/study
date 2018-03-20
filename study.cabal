@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6732d6e952743521c3390658399aa12cf2b1d1982344f1cb735a5c8b7f32d811
+-- hash: 2b29ac1a92c4a7987528c969bb70484ba2304504495eaa4f7a9b2f60efaacf2c
 
 name:           study
 version:        0.1.0
@@ -43,6 +43,7 @@ library
   exposed-modules:
       Study
   other-modules:
+      Study.ChapterOne
       Paths_study
   default-language: Haskell2010
 
