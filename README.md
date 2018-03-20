@@ -22,7 +22,13 @@ Registering study-0.1.0...
 There is _no need_ to run `stack install`, unless you want your app copied to `~/.local/bin`
 so that it can be called from anywhere as a regular binary.
 
-If you want to get GHC to G
+To override the configured GHC options, (ex. GHC optimizations), use `--ghc-opts`:
+
+```shell
+> stack build --ghc-options=-O2
+# ...
+Registering library for study-0.1.0..
+```
 
 ## Run
 
